@@ -18,13 +18,13 @@ jobs:
       fail-fast: false
     steps:
       - name: Checkout armbian/build (main) into workspace root
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           repository: armbian/build
           ref: main
 
       - name: Checkout current repository into userpatches
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
         with:
           path: userpatches
 
