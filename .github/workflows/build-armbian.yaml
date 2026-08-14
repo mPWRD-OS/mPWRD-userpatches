@@ -13,28 +13,29 @@ on:
 jobs:
   build:
     # Use ubuntu-24.04 for x86_64 builds, ubuntu-24.04-arm for ARM builds (everything else)
-    runs-on: ${{ contains(matrix.config, 'x86_64') && 'ubuntu-24.04' || 'ubuntu-24.04-arm' }}
+    # runs-on: ${{ contains(matrix.config, 'x86_64') && 'ubuntu-26.04' || 'ubuntu-26.04-arm' }}
+    runs-on: ubuntu-26.04
     strategy:
       matrix:
         include:
           - config: ebyte-ecb41-pge
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
           - config: forlinx-ok3506-s12
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
           - config: luckfox-lyra-plus
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
           - config: luckfox-lyra-ultra-w
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
           - config: luckfox-lyra-zero-w
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
           - config: luckfox-pico-max
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: v26.08 # Stable branch
           - config: luckfox-pico-mini
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: v26.08 # Stable branch
           - config: raspberry-pi-64bit
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: v26.08 # Stable branch
           - config: uefi-x86_64
-            armbian_ref: v26.5.1 # Stable Tag
+            armbian_ref: v26.08 # Stable branch
       fail-fast: false
     steps:
       - name: Checkout armbian/build into workspace root
