@@ -19,15 +19,15 @@ jobs:
       matrix:
         include:
           - config: ebyte-ecb41-pge
-            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
+            armbian_ref: v26.11.0-trunk.30 # RK3506 U-Boot fix
           - config: forlinx-ok3506-s12
-            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
+            armbian_ref: v26.11.0-trunk.30 # RK3506 U-Boot fix
           - config: luckfox-lyra-plus
-            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
+            armbian_ref: v26.11.0-trunk.30 # RK3506 U-Boot fix
           - config: luckfox-lyra-ultra-w
-            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
+            armbian_ref: v26.11.0-trunk.30 # RK3506 U-Boot fix
           - config: luckfox-lyra-zero-w
-            armbian_ref: 0a6e3d8a789f7864a4cd23abf1688dbb84d5fb37 # RK3506 U-Boot fix
+            armbian_ref: v26.11.0-trunk.30 # RK3506 U-Boot fix
           - config: luckfox-pico-max
             armbian_ref: v26.08 # Stable branch
           - config: luckfox-pico-mini
